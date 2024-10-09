@@ -1,0 +1,6 @@
+html, body {
+    min-height: 100%;
+}
+table, th, td {
+    border: 1px solid black;
+}
