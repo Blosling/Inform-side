@@ -1,47 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        .icon-bar {
-  width: 100%; 
-  background-color: #555; 
-  overflow: auto; 
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Du nederen!</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    .icon-bar {
+      width: 100%;
+      background-color: #555;
+      overflow: auto;
+    }
 
-.icon-bar a {
-  float: left; 
-  text-align: center; 
-  width: 16.6666666667%; 
-  padding: 12px 0; 
-  transition: all 0.3s ease; 
-  color: white; 
-  font-size: 36px; 
-}
+    .icon-bar a {
+      float: left;
+      text-align: center;
+      width: 16.6666666667%;
+      padding: 12px 0;
+      transition: all 0.3s ease;
+      color: white;
+      font-size: 36px;
+    }
 
-.icon-bar a:hover {
-  background-color: #000; 
-}
+    .icon-bar a:hover {
+      background-color: #000;
+    }
 
-.icon-bar-active {
-  background-color: #04AA6D !important;
-}
-    </style>
+    .icon-bar-active {
+      background-color: #04AA6D !important;
+    }
+  </style>
 </head>
-<body>
-    
 
-<div class="icon-bar">
-  <a href="./image.html"><i class="fa fa-image"></i></a>
-  <a href="./videos.html"><i class="fa-brands fa-youtube"></i></a>
-  <a href="./kort.html"><i class="fa-solid fa-map"></i></a>
-  <a href="./om.html"><i class="fa-solid fa-question"></i></a>
-  <a href="./tur.html"><i class="fa-solid fa-bus"></i></a>
-  <a class="icon-bar-active" href="./timer.html"><i class="fa-solid fa-stopwatch"></i></a>
-</div>
+<body>
+
+
+  <div class="icon-bar">
+    <a href="./image.html"><i class="fa fa-image"></i></a>
+    <a href="./videos.html"><i class="fa-brands fa-youtube"></i></a>
+    <a href="./kort.html"><i class="fa-solid fa-map"></i></a>
+    <a href="./om.html"><i class="fa-solid fa-question"></i></a>
+    <a href="./tur.html"><i class="fa-solid fa-bus"></i></a>
+    <a class="icon-bar-active" href="./timer.html"><i class="fa-solid fa-stopwatch"></i></a>
+  </div>
+
+  <head>
     
-</body>
+    <script type="text/javascript">
+      {
+      var now = new Date();
+      var event1 = new Date("Dec 20 2024 14:20:00");
+      var seconds = (now - event1) / 1000;
+      var minutes = seconds / 60;
+      var hours = minutes / 60;
+      var days = hours / 24;
+      var ID = window.setInterval(update, 1000);
+      function update() {
+        now = new Date();
+        days=Math.floor((event1-now)/1000/60/60/24)
+        hours=Math.floor((event1-now)/1000/60/60) %24
+        minutes=Math.floor((event1-now)/1000/60) %60
+        seconds=Math.floor((event1-now)/1000)%60
+        document.getElementById('jdays').value = days;
+        document.getElementById('jhours').value = hours;
+        document.getElementById('jminutes').value = minutes;
+        document.getElementById('jseconds').value = seconds;
+      }}
+    </script>
+  </head>
+
+  <body>
+    <h1>Nedt&aelig;lling til Juleferie</h1>
+    <p id="cnt">Der er <input type="text" id="jdays" value="0" style="width:40px;" /> dage eller
+      <input type="text" id="jhours" value="0" style="width:70px;" />timer
+      <input type="text" id="jminutes" value="0" style="width:70px;" /> minutter
+      <input type="text" id="jseconds" value="0" style="width:70px;" /> sekunder til Juleferie
+    
+    </p> 
+  
+  </body>
+    
+  <head>
+    <script type="text/javascript">
+      {
+      var now = new Date();
+      var event2 = new Date("Feb 9 2025");
+      var seconds = (now - event2) / 1000;
+      var minutes = seconds / 60;
+      var hours = minutes / 60;
+      var days = hours / 24;
+      var ID = window.setInterval(update, 1000);
+      function update() {
+        now = new Date();
+        days=Math.floor((event2-now)/1000/60/60/24)
+        hours=Math.floor((event2-now)/1000/60/60) %24
+        minutes=Math.floor((event2-now)/1000/60) %60
+        seconds=Math.floor((event2-now)/1000) %60
+        document.getElementById('fdays').value = days;
+        document.getElementById('fhours').value = hours;
+        document.getElementById('fminutes').value = minutes;
+        document.getElementById('fseconds').value = seconds;
+      }}
+    </script>
+  </head>
+
+  <body>
+    <h1>Nedt&aelig;lling til Fødselsdag</h1>
+    <p id="cnt">Der er <input type="text" id="fdays" value="0" style="width:40px;" /> dage eller
+      <input type="text" id="fhours" value="0" style="width:70px;" />timer
+      <input type="text" id="fminutes" value="0" style="width:70px;" /> minutter
+      <input type="text" id="fseconds" value="0" style="width:70px;" /> sekunder til det min Fødselsdag
+    </p>
+
+    <head>
+      <script type="text/javascript">
+        {
+        var now = new Date();
+        var event3 = new Date("June 27 2026");
+        var seconds = (now - event3) / 1000;
+        var minutes = seconds / 60;
+        var hours = minutes / 60;
+        var days = hours / 24;
+        var ID = window.setInterval(update, 1000);
+        function update() {
+          now = new Date();
+          days=Math.floor((event3-now)/1000/60/60/24)
+          hours=Math.floor((event3-now)/1000/60/60) %24
+          minutes=Math.floor((event3-now)/1000/60) %60
+          seconds=Math.floor((event3-now)/1000) %60
+          document.getElementById('ddays').value = days;
+          document.getElementById('dhours').value = hours;
+          document.getElementById('dminutes').value = minutes;
+          document.getElementById('dseconds').value = seconds;
+        }}
+      </script>
+    </head>
+  
+    <body>
+
+    <h1>Nedt&aelig;lling til Fødselsdag</h1>
+    <p id="cnt">Der er <input type="text" id="ddays" value="0" style="width:40px;" /> dage eller
+      <input type="text" id="dhours" value="0" style="width:70px;" />timer
+      <input type="text" id="dminutes" value="0" style="width:70px;" /> minutter
+      <input type="text" id="dseconds" value="0" style="width:70px;" /> sekunder til frihed?
+    </p>
 </html>
