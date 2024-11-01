@@ -1,20 +1,12 @@
 html, body {
-    min-height: 100%;
-    
-    background: linear-gradient(#4155da, #a7adf0);
+    min-height: 100vh;
+    margin:0%;
+    padding:0%;
+    background: linear-gradient(#4155da, #8d93ed);
    
 }
 table, th, td {
     border: 1px solid black;
 
     
-}
-
-    div.polaroid {
-        width: 220px;
-        padding: 10px 10px 20px 10px;
-        border: 1px solid #BFBFBF;
-        background-color: white;
-        box-shadow: 10px 10px 5px #aaaaaa;
-        margin-left: 50px;
 }
